@@ -216,82 +216,6 @@ spam.addEventListener("click", function () {
   <li>Falo 4 idiomas</li>
 </ul>
 
-<div class="minha-arte">
-  <h2>Minhas Artes</h2>
-  <div class="galeria-artes">
-    <img src="foto/browt.jpeg" alt="Arte Browt">
-    <img src="foto/morchuva.jpeg" alt="Arte de Foto de Perfil">
-    <img src="foto/sableye.jpeg" alt="Arte Sableye">
-    <img src="foto/litleo.jpeg" alt="Arte Litleo">
-  </div>
-</div>
-
-<div class="jogosfav">
-  <h2>Meus jogos favoritos!</h2>
-
-  <div class="listajogos">
-    <img src="foto/coverdelta.jpg" data-audio="audio/sedeltarune.mp3" alt="DELTARUNE">
-
-    <img src="foto/covermario.jpg" data-audio="audio/semario.mp3" alt="Super Mario World">
-
-    <img src="foto/coversilk.jpg" data-audio="audio/sesilksong.mp3" alt="Hollow Knight: Silksong">
-
-    <img src="foto/covermetroid.jpg" data-audio="audio/semetroid.mp3" alt="Super Metroid">
-
-    <img src="foto/coverhades.jpg" data-audio="audio/sehades.mp3" alt="Hades II">
-
-    <img src="foto/coverrayman.jpg" data-audio="audio/serayman.mp3" alt="Rayman Origins">
-
-    <img src="foto/coverzelda.jpg" data-audio="audio/sezelda.mp3" alt="The Legend of Zelda: Breath of the Wild">
-
-    <img src="foto/coverpokemon.jpg" data-audio="audio/sepokemon.mp3" alt="Pokémon Black 2">
-
-    <img src="foto/coversmash.jpg" data-audio="audio/sesmashbros.mp3" alt="Super Smash Bros. Ultimate">
-
-    <img src="foto/coversonic.png" data-audio="audio/sesonic.mp3" data-volume="0" alt="Sonic Mania">
-  </div>
-</div>
-
-<script>
-  const imagens = document.querySelectorAll('.listajogos img');
-  let audioAtual = new Audio();
-
-  imagens.forEach(img => {
-    img.addEventListener('click', () => {
-      const src = img.getAttribute('data-audio');
-
-      audioAtual.pause();
-      audioAtual = new Audio(src);
-      audioAtual.play();
-    });
-  });
-</script>
-<div class="massa">
-  <img src="foto/mama.png" id="macarrao">
-  <p id="legenda">Pode vigiar meu macarrão pra mim?</p>
-  <audio id="somExplosao" src="audio/explode.mp3"></audio>
-  
-  <script>
-  const img = document.getElementById("macarrao");
-  const legenda = document.getElementById("legenda");
-  const som = document.getElementById("somExplosao");
-
-  img.addEventListener("click", function () {
-    som.currentTime = 0; 
-    som.play(); 
-
-    img.src = "foto/explode.gif?=" + Date.now();
-    legenda.textContent = "MEU DEUS DO CÉU!";
-
-    setTimeout(() => {
-      img.style.opacity = "0";
-      img.style.pointerEvents = "none";
-      legenda.textContent = "Precisava explodir minha comida mano?";
-    }, 1700);
-  });
-  </script>
-</div>
-
 <div class="atividades">
   <h2>Minhas Atividades</h2>
 
@@ -373,6 +297,83 @@ spam.addEventListener("click", function () {
     </li>
 
   </ul>
+</div>
+
+  
+<div class="minha-arte">
+  <h2>Minhas Artes</h2>
+  <div class="galeria-artes">
+    <img src="foto/browt.jpeg" alt="Arte Browt">
+    <img src="foto/morchuva.jpeg" alt="Arte de Foto de Perfil">
+    <img src="foto/sableye.jpeg" alt="Arte Sableye">
+    <img src="foto/litleo.jpeg" alt="Arte Litleo">
+  </div>
+</div>
+
+<div class="jogosfav">
+  <h2>Meus jogos favoritos!</h2>
+
+  <div class="listajogos">
+    <img src="foto/coverdelta.jpg" data-audio="audio/sedeltarune.mp3" alt="DELTARUNE">
+
+    <img src="foto/covermario.jpg" data-audio="audio/semario.mp3" alt="Super Mario World">
+
+    <img src="foto/coversilk.jpg" data-audio="audio/sesilksong.mp3" alt="Hollow Knight: Silksong">
+
+    <img src="foto/covermetroid.jpg" data-audio="audio/semetroid.mp3" alt="Super Metroid">
+
+    <img src="foto/coverhades.jpg" data-audio="audio/sehades.mp3" alt="Hades II">
+
+    <img src="foto/coverrayman.jpg" data-audio="audio/serayman.mp3" alt="Rayman Origins">
+
+    <img src="foto/coverzelda.jpg" data-audio="audio/sezelda.mp3" alt="The Legend of Zelda: Breath of the Wild">
+
+    <img src="foto/coverpokemon.jpg" data-audio="audio/sepokemon.mp3" alt="Pokémon Black 2">
+
+    <img src="foto/coversmash.jpg" data-audio="audio/sesmashbros.mp3" alt="Super Smash Bros. Ultimate">
+
+    <img src="foto/coversonic.png" data-audio="audio/sesonic.mp3" data-volume="0" alt="Sonic Mania">
+  </div>
+</div>
+
+<script>
+  const imagens = document.querySelectorAll('.listajogos img');
+  let audioAtual = new Audio();
+
+  imagens.forEach(img => {
+    img.addEventListener('click', () => {
+      const src = img.getAttribute('data-audio');
+
+      audioAtual.pause();
+      audioAtual = new Audio(src);
+      audioAtual.play();
+    });
+  });
+</script>
+<div class="massa">
+  <img src="foto/mama.png" id="macarrao">
+  <p id="legenda">Pode vigiar meu macarrão pra mim?</p>
+  <audio id="somExplosao" src="audio/explode.mp3"></audio>
+  
+  <script>
+  const img = document.getElementById("macarrao");
+  const legenda = document.getElementById("legenda");
+  const som = document.getElementById("somExplosao");
+
+  img.addEventListener("click", function () {
+    som.currentTime = 0; 
+    som.play(); 
+
+    img.src = "foto/explode.gif?=" + Date.now();
+    legenda.textContent = "MEU DEUS DO CÉU!";
+
+    setTimeout(() => {
+      img.style.opacity = "0";
+      img.style.pointerEvents = "none";
+      legenda.textContent = "Precisava explodir minha comida mano?";
+    }, 1700);
+  });
+  </script>
 </div>
   
 <a href="https://www2.ifal.edu.br/" target="_blank">
