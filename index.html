@@ -45,101 +45,9 @@
     width: fit-content;
   }
 
-  img.ifallogo {
-    max-width: 200px;
-    height: auto;
-    display: block;
-    margin: 100px auto;
-  }
-
-  .minha-arte {
-    background: rgba(255, 255, 255, 0.6);
-    padding: 20px;
-    margin: 40px auto;
-    border: 2px solid #17401D;
-    border-radius: 20px;
-    max-width: 1000px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  .galeria-artes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .galeria-artes img {
-    width: 200px;
-    height: auto;
-    border-radius: 20px;
-    border: 2px solid #17401D;
-    box-shadow: 10px 4px 10px rgba(0,0,0,0.5));
-    transition: transform 0.2s;
-  }
-
-  .galeria-artes img:hover {
-    transform: scale(1.05);
-  }
-
-  .rodape {
-    background: #17401D;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 40px;
-  }
-
-  .massa {
-    width: 308px;
-    height: 183px;
-    margin: 40px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-
-  .massa img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: opacity 0.3s, transform 0.1s;
-    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
-  }
 
   #legenda {
     margin-left: 10px;
-  }
-
-  .jogosfav {
-    background: rgba(255, 255, 255, 0.6);
-    padding: 20px;
-    margin: 40px auto;
-    border: 2px solid #17401D;
-    border-radius: 20px;
-    max-width: 700px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  .listajogos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .listajogos img {
-    width: 120px;
-    height: 120px;
-    border-radius: 20px;
-    border: 2px solid #17401D;
-    transition: transform 0.4s ease;
-  }
-
-  .listajogos img:hover {
-    transform: scale(1.5);
-    z-index: 10;
   }
 
   .atividades {
@@ -192,26 +100,14 @@
 </header>
 
 <p class="intro">
-  Meu nome é Murilo Marques Antunes, eu tenho 15 anos e sou do curso de <b>Desenvolvimento de Sistemas!</b>
-  <img id="spamton" src="https://media.tenor.com/mNAGAJmu9rcAAAAj/spamton-dance.gif" width="84" height="100" alt="Spamton Dançando">
+  Meu nome é Murilo Marques Antunes, eu tenho 15 anos e sou do curso de <b>Desenvolvimento de Sistemas</b>, meu objetivo é conseguir uma carreira na indústria dos jogos.
 </p>
 
-<audio id="espanto" src="audio/spamton.mp3"></audio>
-<script>
-const spam = document.getElementById("spamton"); 
-const somspam = document.getElementById("espanto");
-
-spam.addEventListener("click", function () {
-  somspam.currentTime = 0;
-  somspam.play();
-});
-</script>
-
 <ul>
-  <li>Tentando aprender Python, Java e HTML</li>
-  <li>Artista digital</li>
-  <li>Sou de Brasília</li>
-  <li>Falo 4 idiomas</li>
+  <li><b>Conhecimento básico em:</b></li>
+  <li>Python</li>
+  <li>JavaScript</li>
+  <li>HTML/CSS</li>
 </ul>
 
 <div class="atividades">
@@ -229,18 +125,18 @@ spam.addEventListener("click", function () {
     <li>
       <b>Capítulo 04</b>
 
-      <ul>
-        <li>
+      <tr>
+        <tl>
           <a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap04/at01.html" target="_blank">
             Atividade 01
           </a>
-        </li>
+        </tl>
 
-        <li>
+        <tl>
           <a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap04/at02.html" target="_blank">
             Atividade 02
           </a>
-        </li>
+        </tl>
 
         <li>
           <a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap04/at03.html" target="_blank">
@@ -253,7 +149,7 @@ spam.addEventListener("click", function () {
             Atividade 04
           </a>
         </li>
-      </ul>
+      </tr>
     </li>
 
 
