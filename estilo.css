@@ -63,7 +63,7 @@ body {
 /* ---- Aparência (mude à vontade) ---- */
 .cabecalho {
   background: linear-gradient(135deg, var(--cor), var(--cor-escura));
-  color: #fff;
+  color: --cor;
   padding: 32px;
   border-radius: var(--raio);
 }
