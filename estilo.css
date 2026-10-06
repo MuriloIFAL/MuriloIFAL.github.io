@@ -1,13 +1,16 @@
-
 :root {
   --cor: #7ed47e;
   --cor-escura: #84B528;
   --texto: #0A3D03;
   --suave: #effdb0;
-  --fundo: #eef2ff;
+  --fundo: #BAE66E;
   --superficie: #ffffff;
   --borda: #184e0d;
   --raio: 12px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -21,7 +24,6 @@ body {
 /* ============================================================
    LAYOUT (GRID) — NÃO MUDE
    ============================================================ */
-* { box-sizing: border-box; }
 
 .pagina {
   display: grid;
@@ -29,17 +31,28 @@ body {
   grid-template-areas:
     "cabecalho cabecalho"
     "principal lateral"
-    "rodape    rodape";
+    "rodape rodape";
   gap: 24px;
   max-width: 1000px;
   margin: 0 auto;
   padding: 24px;
 }
 
-.cabecalho { grid-area: cabecalho; }
-.principal { grid-area: principal; }
-.lateral   { grid-area: lateral; }
-.rodape    { grid-area: rodape; }
+.cabecalho {
+  grid-area: cabecalho;
+}
+
+.principal {
+  grid-area: principal;
+}
+
+.lateral {
+  grid-area: lateral;
+}
+
+.rodape {
+  grid-area: rodape;
+}
 
 .projetos {
   display: grid;
@@ -58,23 +71,54 @@ body {
       "rodape";
   }
 }
+
 /* ===================== fim do LAYOUT ===================== */
 
-/* ---- Aparência (mude à vontade) ---- */
+/* ---- Aparência ---- */
+
 .cabecalho {
-  background: linear-gradient(135deg, var(--cor), var(--cor-escura));
-  color: --cor;
+  background: linear-gradient(
+    135deg,
+    var(--cor),
+    var(--cor-escura)
+  );
+
+  /* CORRIGIDO */
+  color: var(--cor);
+
   padding: 32px;
   border-radius: var(--raio);
 }
-.cabecalho h1 { margin: 0; font-size: clamp(1.6rem, 4vw, 2.4rem); }
-.cabecalho p { margin: 6px 0 0; opacity: .92; }
-.cabecalho nav { margin-top: 16px; display: flex; gap: 18px; flex-wrap: wrap; }
-.cabecalho nav a { color: #fff; text-decoration: none; font-weight: 600; }
-.cabecalho nav a:hover { text-decoration: underline; }
+
+.cabecalho h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+}
+
+.cabecalho p {
+  margin: 6px 0 0;
+  opacity: 0.92;
+}
+
+.cabecalho nav {
+  margin-top: 16px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.cabecalho nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cabecalho nav a:hover {
+  text-decoration: underline;
+}
 
 .principal p {
-   text-align: justify;
+  text-align: justify;
 }
 
 .cartao {
@@ -82,23 +126,68 @@ body {
   border: 1px solid var(--borda);
   border-radius: var(--raio);
   padding: 22px;
-  box-shadow: 0 6px 20px rgba(30, 30, 60, .08);
+  box-shadow: 0 6px 20px rgba(30, 30, 60, 0.08);
 }
-.cartao + .cartao { margin-top: 24px; }
-h2 { color: var(--cor); margin-top: 0; }
 
-.projeto a {color: var(--cor);}
+.cartao + .cartao {
+  margin-top: 24px;
+}
+
+h2 {
+  color: var(--cor-escura);
+  margin-top: 0;
+}
+
+.projeto a {
+  color: var(--cor-escura);
+}
+
 .projeto {
   background: var(--fundo);
   border: 1px solid var(--borda);
   border-radius: 10px;
   padding: 16px;
 }
-.projeto h3 { margin: 0 0 6px; color: var(--cor-escura); }
 
-.habilidades { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.habilidades li { background: var(--fundo); border: 1px solid var(--borda); border-radius: 999px; padding: 4px 12px; font-size: .9rem; }
-.contato { list-style: none; padding: 0; margin: 0; }
-.contato li { margin: 10px 0; }
-.contato a { color: var(--cor); }
-.rodape { text-align: center; color: var(--suave); padding: 8px; font-size: .9rem; }
+.projeto h3 {
+  margin: 0 0 6px;
+  color: var(--cor-escura);
+}
+
+.habilidades {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.habilidades li {
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.9rem;
+}
+
+.contato {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contato li {
+  margin: 10px 0;
+}
+
+.contato a {
+  color: var(--cor-escura);
+}
+
+.rodape {
+  text-align: center;
+  color: var(--texto);
+  padding: 8px;
+  font-size: 0.9rem;
+}
