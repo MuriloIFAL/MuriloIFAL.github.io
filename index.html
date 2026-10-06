@@ -1,212 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<title>Página Pessoal</title>
-
-
-  
-<link rel="icon" type="image/x-icon" href="foto/undertale.gif">
-
-<style>
-  body {
-    background: linear-gradient(#B3FFB3, #f3fff3);
-    text-align: center;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    min-height: 100vh;
-  }
-
-  header {
-    padding: 10px;
-  }
-
-     table {
-      border-collapse: collapse;
-      text-align: center;
-      margin: 0 auto;
-    }
-
-    th, td {
-      border: 1px solid #333333;
-      padding: 10px 20px;
-    }
-
-    th {
-      background-color: #f2f2f2;
-    }
-
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  
-  img.foto {
-    width: 250px;
-    height: 300px;
-    display: circle;
-    margin: 20px auto;
-    border-radius: 50%;
-    border: 5px solid #17401D;
-  }
-
-  p.intro {
-    display: inline-flex;
-    text-align: left;
-    gap: 15px;
-    background: rgba(255, 255, 255, 0.6);
-    padding: 10px 15px;
-    border: 2px solid #17401D;
-    border-radius: 15px;
-  }
-
-  ul {
-    list-style: disc;
-    text-align: left;
-    margin: 20px auto;
-    width: fit-content;
-  }
-
-
-  #legenda {
-    margin-left: 10px;
-  }
-
-  .atividades {
-  background: #white;
-  padding: 20px;
-  margin: 40px auto;
-  border: 2px solid #17401D;
-  border-radius: 20px;
-  max-width: 700px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.atividades ul {
-  list-style: disc;
-  text-align: left;
-}
-
-.atividades a {
-  color: #17401D;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.atividades a:hover {
-  text-decoration: underline;
-}
-
-.atividades ul ul {
-  margin-top: 10px;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.atividades b {
-  color: #17401D;
-}
-
-.atividades ul ul li {
-  margin: 5px 0;
-}
-
-.conhecimento {
-  text-align: left
-}
-  
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Pessoal — G. Smith</title>
+  <!-- Salve o tema escolhido como "estilo.css" (mesma pasta deste arquivo) -->
+  <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
+  <div class="pagina">
 
-<header>
-  <h1><b>Murilo Marques Antunes</b></h1>
-  <img src="foto/foto.jpg" class="foto" alt="Minha foto">
-</header>
+    <!-- ====== CABEÇALHO — TROQUE pelo seu nome e sua frase ====== -->
+    <header class="cabecalho">
+      <h1>Murilo Marques</h1>
+      <p>Estudante de Sistemas de Informação · IFAL</p>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
 
-<div class=intro>
-  <b>Data de nascimento:</b> 19/03/2011
- <br>
-</div>
+    <!-- ====== CONTEÚDO PRINCIPAL ====== -->
+    <main class="principal">
+      <section id="sobre" class="cartao">
+        <h2>Sobre mim</h2>
+        <!-- TROQUE por uma breve apresentação sua -->
+        <p>Tenho 15 anos e sou estudante do Ifal campus Maceió, 
+             e atualmente estou cursando Desenvolvimento de 
+             Sistemas na mesma instituição. Meu objetivo após concluir o curso é conseguir um emprego 
+             na indústria dos jogos, e tentar criar algum jogo com minha criatividade.</p>
+      </section>
 
-  
-<div class=intro>
-  Meu nome é Murilo Marques Antunes, eu tenho 15 anos e sou do curso de <b>Desenvolvimento de Sistemas,</b> meu objetivo é conseguir uma carreira na indústria dos jogos.
-</div>
+      <section id="projetos" class="cartao">
+        <h2>Projetos</h2>
+        <!-- Galeria com Grid: cada .projeto é um card; adicione/remova à vontade -->
+        <div class="projetos">
+          <article class="projeto">
+            <h3>Tabelas, Glossário e Multimidia</h3>
+            <p>Exercícios escolares de tabelas, glossários e multimidia.</p>
+          <ul>
+               <li><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap04/at01.html" target="_blank">Acessar Atividade</a></li>
+               <li><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap04/at02.html" target="_blank">Acessar Atividade</a></li>
+               <li><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap04/at03.html" target="_blank">Acessar Atividade</a></li>
+               <li><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap04/at04.html" target="_blank">Acessar Atividade</a></li>
+          </ul>
+          </article>
+          <article class="projeto">
+            <h3>Formulário</h3>
+            <p>Exemplos de uso de formulários.</p>
+          <ul>
+               <li><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap05/at01.html" target="_blank">Acessar Atividade</a></li>
+               <li><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap05/at02.html" target="_blank">Acessar Atividade</a></li>
+               <li><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap05/at03.html" target="_blank">Acessar Atividade</a></li>
+               <li><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap05/at04.html" target="_blank">Acessar Atividade</a></li>
+          </ul>
+          </article>
+          <article class="projeto">
+               <h3>Página de Loja</h3>
+               <p>Demonstração do Bootstrap</p>
+               <a href = "cap08/index.html">Link da Loja</a>
+          </article>
+        </div>
+      </section>
+    </main>
 
+    <aside class="lateral">
+      <section class="cartao">
+        <h2>Habilidades</h2>
+        <ul class="habilidades">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Grid</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+        </ul>
+      </section>
 
-<div class=conhecimento>
-<ul>
-  <li><b>Conhecimento básico em:</b></li>
-  <li>Python</li>
-  <li>JavaScript</li>
-  <li>HTML/CSS</li>
-</ul>
-</div>
+      <section id="contato" class="cartao">
+        <h2>Contato</h2>
 
+        <ul class="contato">
+          <li>✉️ <a href="mailto:mma4@aluno.ifal.edu.br">mma4@aluno.ifal.edu.br</a></li>
+          <li>🐙 <a href="https://github.com/MuriloIFAL">github.com/MuriloIFAL</a></li>
+        </ul>
+      </section>
+    </aside>
 
-  
-<div class="atividades">
-  <h2>Minhas Atividades</h2>
+    <footer class="rodape">© 2026 Murilo Marques · feito com HTML + CSS Grid</footer>
 
-  <ul>
-</div>
-
-
-<table border="1">
-  <thead>
-    <tr>
-      <th>Atividade</th>
-      <th>Link de Acesso</th>
-    </tr>
-  </thead>
-  <tbody>
-
-    <tr>
-      <td>Cap. 4 Atividade 01</td>
-      <td><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap04/at01.html" target="_blank">Acessar Atividade</a></td>
-    </tr>
-    <tr>
-      <td>Cap. 4 Atividade 02</td>
-      <td><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap04/at02.html" target="_blank">Acessar Atividade</a></td>
-    </tr>
-    <tr>
-      <td>Cap. 4 Atividade 03</td>
-      <td><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap04/at03.html" target="_blank">Acessar Atividade</a></td>
-    </tr>
-    <tr>
-      <td>Cap. 4 Atividade 04</td>
-      <td><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap04/at04.html" target="_blank">Acessar Atividade</a></td>
-    </tr>
-
-    <tr>
-      <td>Cap. 5 Atividade 01</td>
-      <td><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap05/at01.html" target="_blank">Acessar Atividade</a></td>
-    </tr>
-    <tr>
-      <td>Cap. 5 Atividade 02</td>
-      <td><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap05/at02.html" target="_blank">Acessar Atividade</a></td>
-    </tr>
-    <tr>
-      <td>Cap. 5 Atividade 03</td>
-      <td><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap05/at03.html" target="_blank">Acessar Atividade</a></td>
-    </tr>
-    <tr>
-      <td>Cap. 5 Atividade 04</td>
-      <td><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/cap05/at04.html" target="_blank">Acessar Atividade</a></td>
-    </tr>
-
-    <tr>
-      <td>Atividade CSS 01 - Sala</td>
-      <td><a href="https://muriloifal.github.io/Murilo1IFAL.github.io/text%20atividade-css01-sala/" target="_blank">Acessar Atividade</a></td>
-    </tr>
-  </tbody>
-</table>
-
+  </div>
 </body>
-</html>
