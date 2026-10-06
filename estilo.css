@@ -1,8 +1,4 @@
 
-/* ============================================================
-   VARIÁVEIS
-   ============================================================ */
-
 :root {
   --cor: #7ed47e;
   --cor-escura: #84b528;
@@ -15,321 +11,277 @@
 }
 
 
-/* ============================================================
-   CONFIGURAÇÕES GERAIS
-   ============================================================ */
+
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-
-  color: var(--texto);
-  background: var(--fundo);
-
-  line-height: 1.6;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background-color: var(--fundo);
+    line-height: 1.6;
 }
 
 
-/* ============================================================
-   LAYOUT (GRID) — MANTIDO
-   ============================================================ */
-
 .pagina {
-  display: grid;
+    display: grid;
 
-  grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr 300px;
 
-  grid-template-areas:
-    "cabecalho cabecalho"
-    "principal lateral"
-    "rodape rodape";
+    grid-template-areas:
+        "cabecalho cabecalho"
+        "principal lateral"
+        "rodape rodape";
 
-  gap: 24px;
+    gap: 24px;
 
-  max-width: 1000px;
+    max-width: 1000px;
 
-  margin: 0 auto;
+    margin: 0 auto;
 
-  padding: 24px;
+    padding: 24px;
 }
 
 .cabecalho {
-  grid-area: cabecalho;
+    grid-area: cabecalho;
 }
 
 .principal {
-  grid-area: principal;
+    grid-area: principal;
 }
 
 .lateral {
-  grid-area: lateral;
+    grid-area: lateral;
 }
 
 .rodape {
-  grid-area: rodape;
+    grid-area: rodape;
 }
-
-
-/* ============================================================
-   GRID DOS PROJETOS
-   ============================================================ */
 
 .projetos {
-  display: grid;
+    display: grid;
 
-  grid-template-columns:
-    repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
 
-  gap: 16px;
+    gap: 16px;
 
-  margin-top: 14px;
+    margin-top: 14px;
 }
 
-
-/* ============================================================
-   RESPONSIVIDADE
-   ============================================================ */
 
 @media (max-width: 640px) {
 
-  .pagina {
-    grid-template-columns: 1fr;
+    .pagina {
+        grid-template-columns: 1fr;
 
-    grid-template-areas:
-      "cabecalho"
-      "principal"
-      "lateral"
-      "rodape";
-  }
+        grid-template-areas:
+            "cabecalho"
+            "principal"
+            "lateral"
+            "rodape";
+    }
 
 }
 
 
-/* ============================================================
-   CABEÇALHO
-   ============================================================ */
+
 
 .cabecalho {
-  background:
-    linear-gradient(
-      135deg,
-      var(--cor),
-      var(--cor-escura)
+    background: linear-gradient(
+        135deg,
+        var(--cor),
+        var(--cor-escura)
     );
 
-  color: #ffffff;
+    color: white;
 
-  padding: 32px;
+    padding: 32px;
 
-  border-radius: var(--raio);
+    border-radius: var(--raio);
 
-  box-shadow:
-    0 6px 20px rgba(30, 30, 60, 0.12);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .cabecalho h1 {
-  margin: 0;
+    margin: 0;
 
-  font-size:
-    clamp(1.6rem, 4vw, 2.4rem);
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
 }
 
 .cabecalho p {
-  margin: 6px 0 0;
+    margin: 6px 0 0;
 
-  opacity: 0.95;
+    opacity: 0.95;
 }
 
 
-/* ============================================================
-   MENU
-   ============================================================ */
+
 
 .cabecalho nav {
-  margin-top: 16px;
+    margin-top: 18px;
 
-  display: flex;
+    display: flex;
 
-  gap: 18px;
+    gap: 18px;
 
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .cabecalho nav a {
-  color: #ffffff;
+    color: white;
 
-  text-decoration: none;
+    text-decoration: none;
 
-  font-weight: 600;
-
-  transition: opacity 0.2s;
+    font-weight: bold;
 }
 
 .cabecalho nav a:hover {
-  text-decoration: underline;
-
-  opacity: 0.8;
+    text-decoration: underline;
 }
 
 
-/* ============================================================
-   TEXTO PRINCIPAL
-   ============================================================ */
 
-.principal p {
-  text-align: justify;
-}
-
-
-/* ============================================================
-   CARTÕES
-   ============================================================ */
 
 .cartao {
-  background: var(--superficie);
+    background-color: var(--superficie);
 
-  border: 1px solid var(--borda);
+    border: 1px solid var(--borda);
 
-  border-radius: var(--raio);
+    border-radius: var(--raio);
 
-  padding: 22px;
+    padding: 22px;
 
-  box-shadow:
-    0 6px 20px rgba(30, 30, 60, 0.08);
+    box-shadow: 0 6px 20px rgba(30, 30, 60, 0.08);
 }
 
 .cartao + .cartao {
-  margin-top: 24px;
+    margin-top: 24px;
 }
 
 
-/* ============================================================
-   TÍTULOS
-   ============================================================ */
+
 
 h2 {
-  color: var(--cor-escura);
+    color: var(--cor-escura);
 
-  margin-top: 0;
+    margin-top: 0;
 }
 
 
-/* ============================================================
-   PROJETOS
-   ============================================================ */
+
+
+.principal p {
+    text-align: justify;
+}
+
+
+
 
 .projeto {
-  background: var(--fundo);
+    background-color: var(--fundo);
 
-  border: 1px solid var(--borda);
+    border: 1px solid var(--borda);
 
-  border-radius: 10px;
+    border-radius: 10px;
 
-  padding: 16px;
+    padding: 16px;
 
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+    transition: 0.2s;
 }
 
 .projeto:hover {
-  transform: translateY(-3px);
+    transform: translateY(-3px);
 
-  box-shadow:
-    0 6px 15px rgba(30, 30, 60, 0.12);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
 }
 
 .projeto h3 {
-  margin: 0 0 6px;
+    margin: 0 0 6px;
 
-  color: var(--cor-escura);
+    color: var(--cor-escura);
 }
 
 .projeto a {
-  color: #275f13;
+    color: var(--texto);
 
-  font-weight: 600;
+    font-weight: bold;
 }
 
 .projeto a:hover {
-  color: var(--borda);
+    color: var(--cor-escura);
 }
 
 
-/* ============================================================
-   HABILIDADES
-   ============================================================ */
 
 .habilidades {
-  list-style: none;
+    list-style: none;
 
-  padding: 0;
+    padding: 0;
 
-  margin: 0;
+    margin: 0;
 
-  display: flex;
+    display: flex;
 
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 
-  gap: 8px;
+    gap: 8px;
 }
 
 .habilidades li {
-  background: var(--fundo);
+    background-color: var(--fundo);
 
-  border: 1px solid var(--borda);
+    border: 1px solid var(--borda);
 
-  border-radius: 999px;
+    border-radius: 999px;
 
-  padding: 4px 12px;
+    padding: 4px 12px;
 
-  font-size: 0.9rem;
+    font-size: 0.9rem;
 }
 
 
-/* ============================================================
-   CONTATO
-   ============================================================ */
 
 .contato {
-  list-style: none;
+    list-style: none;
 
-  padding: 0;
+    padding: 0;
 
-  margin: 0;
+    margin: 0;
 }
 
 .contato li {
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
 .contato a {
-  color: #275f13;
+    color: var(--texto);
 
-  font-weight: 600;
+    font-weight: bold;
 
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .contato a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 
-/* ============================================================
-   RODAPÉ
-   ============================================================ */
+
 
 .rodape {
-  text-align: center;
+    text-align: center;
 
-  color: var(--texto);
+    color: var(--texto);
 
-  padding: 8px;
+    padding: 8px;
 
-  font-size: 0.9rem;
+    font-size: 0.9rem;
 }
