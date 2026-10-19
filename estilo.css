@@ -1,4 +1,3 @@
-
 :root {
   --cor: #7ed47e;
   --cor-escura: #84b528;
@@ -9,9 +8,6 @@
   --borda: #184e0d;
   --raio: 12px;
 }
-
-
-
 
 * {
     box-sizing: border-box;
@@ -29,33 +25,61 @@ body {
     line-height: 1.6;
 }
 
-
 .pagina {
     display: grid;
-
     grid-template-columns: 1fr 300px;
-
     grid-template-areas:
         "cabecalho cabecalho"
         "principal lateral"
         "rodape rodape";
-
     gap: 24px;
-
     max-width: 1000px;
-
     margin: 0 auto;
-
     padding: 24px;
 }
 
 .cabecalho {
-    width: 300px;
+    grid-area: cabecalho; 
+    background: linear-gradient(135deg, var(--cor), var(--cor-escura));
+    color: white;
+    padding: 16px 32px; 
+    border-radius: var(--raio);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    position: relative; 
+    width: 100%;
+}
+
+.cabecalho h1 {
+    margin: 0;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+}
+
+.cabecalho p {
+    margin: 6px 0 0;
+    opacity: 0.95;
+}
+
+.cabecalho nav {
+    margin-top: 18px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 18px;
     flex-wrap: wrap;
-    gap: 20px;
+}
+
+.cabecalho nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cabecalho nav a:hover {
+    text-decoration: underline;
+}
+
+.midia-spamton {
+    position: absolute;
+    right: 32px;
+    bottom: 16px; 
 }
 
 .gif {
@@ -79,103 +103,42 @@ body {
 
 .projetos {
     display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(200px, 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 16px;
-
     margin-top: 14px;
 }
 
-
-.midia-spamton {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-left: auto;
-}
-
 @media (max-width: 640px) {
-    .cabecalho {
-        flex-direction: column;
-        text-align: center;
+    .pagina {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "cabecalho"
+            "principal"
+            "lateral"
+            "rodape";
     }
+
+    .cabecalho {
+        text-align: center;
+        padding: 24px 16px;
+    }
+
     .cabecalho nav {
         justify-content: center;
     }
+
     .midia-spamton {
-        margin: 10px auto 0;
+        position: static; 
+        margin: 15px auto 0;
+        justify-content: center;
     }
 }
 
-
-
-.cabecalho {
-    background: linear-gradient(
-        135deg,
-        var(--cor),
-        var(--cor-escura)
-    );
-
-    color: white;
-
-    padding: 32px;
-
-    border-radius: var(--raio);
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-}
-
-.cabecalho h1 {
-    margin: 0;
-
-    font-size: clamp(1.6rem, 4vw, 2.4rem);
-}
-
-.cabecalho p {
-    margin: 6px 0 0;
-
-    opacity: 0.95;
-}
-
-
-
-
-.cabecalho nav {
-    margin-top: 18px;
-
-    display: flex;
-
-    gap: 18px;
-
-    flex-wrap: wrap;
-}
-
-.cabecalho nav a {
-    color: white;
-
-    text-decoration: none;
-
-    font-weight: bold;
-}
-
-.cabecalho nav a:hover {
-    text-decoration: underline;
-}
-
-
-
-
 .cartao {
     background-color: var(--superficie);
-
     border: 1px solid var(--borda);
-
     border-radius: var(--raio);
-
     padding: 22px;
-
     box-shadow: 0 6px 20px rgba(30, 30, 60, 0.08);
 }
 
@@ -183,52 +146,35 @@ body {
     margin-top: 24px;
 }
 
-
-
-
 h2 {
     color: var(--cor-escura);
-
     margin-top: 0;
 }
-
-
-
 
 .principal p {
     text-align: justify;
 }
 
-
-
-
 .projeto {
     background-color: var(--fundo);
-
     border: 1px solid var(--borda);
-
     border-radius: 10px;
-
     padding: 16px;
-
     transition: 0.2s;
 }
 
 .projeto:hover {
     transform: translateY(-3px);
-
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
 }
 
 .projeto h3 {
     margin: 0 0 6px;
-
     color: var(--cor-escura);
 }
 
 .projeto a {
     color: var(--texto);
-
     font-weight: bold;
 }
 
@@ -236,41 +182,26 @@ h2 {
     color: var(--cor-escura);
 }
 
-
-
 .habilidades {
     list-style: none;
-
     padding: 0;
-
     margin: 0;
-
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 8px;
 }
 
 .habilidades li {
     background-color: var(--fundo);
-
     border: 1px solid var(--borda);
-
     border-radius: 999px;
-
     padding: 4px 12px;
-
     font-size: 0.9rem;
 }
 
-
-
 .contato {
     list-style: none;
-
     padding: 0;
-
     margin: 0;
 }
 
@@ -280,9 +211,7 @@ h2 {
 
 .contato a {
     color: var(--texto);
-
     font-weight: bold;
-
     text-decoration: none;
 }
 
@@ -290,15 +219,9 @@ h2 {
     text-decoration: underline;
 }
 
-
-
-
 .rodape {
     text-align: center;
-
     color: var(--texto);
-
     padding: 8px;
-
     font-size: 0.9rem;
 }
