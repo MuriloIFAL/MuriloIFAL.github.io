@@ -221,6 +221,16 @@
 
     </div>
 
+    <script>
+        const spamtonImg = document.getElementById('img');
+        const spamtonAudio = document.getElementById('click-sound');
+
+        spamtonImg.addEventListener('click', () => {
+            spamtonAudio.currentTime = 0; 
+            spamtonAudio.play();
+        });
+    </script>
+    
 </body>
 
 </html>
