@@ -79,8 +79,9 @@ body {
 
 
 .gif {
-  display: block;
-  margin-left: auto
+  position: absolute;
+  top: 15px;
+  bottom: 20px;
 }
 
 @media (max-width: 640px) {
