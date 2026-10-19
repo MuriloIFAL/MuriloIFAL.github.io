@@ -50,12 +50,21 @@ body {
 }
 
 .cabecalho {
+    width: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
 }
+
+.gif {
+    display: block;
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+}
+
 .principal {
     grid-area: principal;
 }
