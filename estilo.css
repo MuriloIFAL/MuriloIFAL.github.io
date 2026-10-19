@@ -50,10 +50,12 @@ body {
 }
 
 .cabecalho {
-    grid-area: cabecalho;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
-
 .principal {
     grid-area: principal;
 }
@@ -78,26 +80,25 @@ body {
 }
 
 
-.gif {
-  position: absolute;
-  top: 15px;
-  bottom: 20px;
+.midia-spamton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
 }
 
 @media (max-width: 640px) {
-
-    .pagina {
-        grid-template-columns: 1fr;
-
-        grid-template-areas:
-            "cabecalho"
-            "principal"
-            "lateral"
-            "rodape";
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
     }
-
+    .cabecalho nav {
+        justify-content: center;
+    }
+    .midia-spamton {
+        margin: 10px auto 0;
+    }
 }
-
 
 
 
