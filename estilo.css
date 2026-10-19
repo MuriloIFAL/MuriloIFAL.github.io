@@ -51,6 +51,7 @@ body {
 
 .cabecalho {
     grid-area: cabecalho;
+    position: relative;
 }
 
 .principal {
