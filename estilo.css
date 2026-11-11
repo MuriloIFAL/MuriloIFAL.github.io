@@ -162,6 +162,7 @@ h2 {
     border-radius: 10px;
     padding: 16px;
     transition: 0.2s;
+    border-radius: var(--raio);
 }
 
 .projeto:hover {
