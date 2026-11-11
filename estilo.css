@@ -106,7 +106,8 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 16px;
     margin-top: 14px;
-    background: var(--cor)
+    background: var(--cor);
+    border-radius: var(--raio);
 }
 
 @media (max-width: 640px) {
