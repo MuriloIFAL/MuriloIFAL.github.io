@@ -107,7 +107,7 @@ body {
     gap: 16px;
     margin-top: 14px;
     background: var(--cor);
-    border-radius: 10%;
+    border-radius: 5%;
 }
 
 @media (max-width: 640px) {
