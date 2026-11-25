@@ -265,44 +265,34 @@
         });
     </script>
 
+    
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
     <script type="text/javascript">
-
         emailjs.init({
             publicKey: "YNfnztk2sFH-m1VCPl",
         });
     
-        
+        const form = document.getElementById('contact-form');
         const btn = document.getElementById('btn-enviar');
-        btn.disabled = true;
-        btn.textContent = 'Enviando...';
-        
-        emailjs.sendForm('service_4pyba29', 'template_s1n77lo', form)
-            .then(() => {
+    
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+    
+            btn.disabled = true;
+            btn.textContent = 'Enviando...';
+    
+            try {
+                await emailjs.sendForm('service_4pyba29', 'template_s1n77lo', form);
                 alert('Mensagem enviada com sucesso!');
-                form.reset(); 
-            }, (error) => {
-                alert('Erro ao enviar: ' + JSON.stringify(error));
-            })
-            .finally(() => {
+                form.reset();
+            } catch (error) {
+                console.error('Erro detalhado:', error);
+                alert('Erro ao enviar: ' + (error.text || error.message || JSON.stringify(error)));
+            } finally {
                 btn.disabled = false;
                 btn.textContent = 'Enviar';
-            });
-        
-        const form = document.getElementById('contact-form');
-    
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); 
-    
-
-            emailjs.sendForm('service_4pyba29', 'template_s1n77lo', this)
-                .then(() => {
-                    alert('Mensagem enviada com sucesso!');
-                    form.reset(); 
-                }, (error) => {
-                    alert('Erro ao enviar: ' + JSON.stringify(error));
-                });
+            }
         });
     </script>
 
