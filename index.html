@@ -278,7 +278,7 @@
         btn.disabled = true;
         btn.textContent = 'Enviando...';
         
-        emailjs.sendForm('service_4pyba29', 'template_s1n77lo', this)
+        emailjs.sendForm('service_4pyba29', 'template_s1n77lo', form)
             .then(() => {
                 alert('Mensagem enviada com sucesso!');
                 form.reset(); 
